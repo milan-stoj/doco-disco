@@ -6,6 +6,7 @@
 //     navLinks.style.right = "-200px";
 // }
 
+AOS.init();
 
 
 $( document ).ready(function() {
@@ -30,6 +31,5 @@ $( document ).ready(function() {
         );
     });
 
-    AOS.init();
     
 });
