@@ -126,12 +126,12 @@ nav img{
 }
 
 .nav-links ul li::after{
-    /* content: ''; */
+    content: '';
     width: 0%;
     height: 2px;
     background-color: #2c84e9;
     display: block;
-    /* margin: auto; */
+    margin: auto;
     transition: 0.33s;
 }
 
