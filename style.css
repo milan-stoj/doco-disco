@@ -25,6 +25,7 @@
     width: 100%;
     overflow: hidden;
     object-position: top left;
+    border-left: none;
 }
 
 nav{
@@ -381,19 +382,16 @@ p{
 
 
     
-/* Styling the three events section */
-section .events {
-}
     
 /* Styling the links of
 the events section */
-section .events ul {
+.events ul {
     padding: 40px;
     box-sizing: border-box;
 }
     
 /* Styling the lists of the event section */
-section .events ul li {
+.events ul li {
     list-style: none;
     background: #fff;
     box-sizing: border-box;
@@ -402,7 +400,7 @@ section .events ul li {
 }
     
 /* Styling the time class of events section */
-section .events ul li .time {
+.events ul li .time {
     position: relative;
     background: #262626;
     box-sizing: border-box;
@@ -415,13 +413,13 @@ section .events ul li .time {
     
 /* Styling the hover effect
     of events section */
-section .events ul li:hover .time {
+.events ul li:hover .time {
     background: #e91e63;
 }
     
 /* Styling the header of time
     class of events section */
-section .events ul li .time h2 {
+.events ul li .time h2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -433,13 +431,13 @@ section .events ul li .time h2 {
     
 /* Styling the texts of time
 class of events section */
-section .events ul li .time h2 span {
+.events ul li .time h2 span {
     font-size: 30px;
 }
     
 /* Styling the details
 class of events section */
-section .events ul li .details {
+.events ul li .details {
     padding: 0px 20px;
     background: #fff;
     box-sizing: border-box;
@@ -450,7 +448,7 @@ section .events ul li .details {
     
 /* Styling the header of the
 details class of events section */
-section .events ul li .details h3 {
+.events ul li .details h3 {
     text-align: left;
     position: relative;
     margin: 0;
@@ -460,7 +458,7 @@ section .events ul li .details h3 {
     
 /* Styling the lists of details
 class of events section */
-section .events ul li .details p {
+.events ul li .details p {
     position: relative;
     margin: 10px 0 0;
     padding: 0;
@@ -469,7 +467,7 @@ section .events ul li .details p {
     
 /* Styling the links of details
 class of events section */
-section .events ul li .details a {
+.events ul li .details a {
     display: inline-block;
     text-decoration: none;
     padding: 10px 15px;
@@ -480,7 +478,7 @@ section .events ul li .details a {
 }
     
 /* Styling the details class's hover effect */
-section .events ul li .details a:hover {
+.events ul li .details a:hover {
     background: #e91e63;
     color: #fff;
     border-color: #e91e63;
