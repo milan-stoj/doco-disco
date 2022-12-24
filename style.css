@@ -1,15 +1,17 @@
+*::-webkit-scrollbar{
+    display: none;
+}
+
 *{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+
 }
 
 .header{
     min-height: 100vh;
     width: 100%;
-    /* background-image: linear-gradient(rgb(192, 186, 186, 0.5),rgba(255, 255, 255, 1)),url('./images/doco-skateboard.JPG');
-    background-position: center;
-    background-size: cover; */
     position: relative;
     justify-content: left;
     align-items: center;
@@ -20,7 +22,7 @@
 #docoVideo {
     object-fit: cover;
     position: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     overflow: hidden;
     object-position: top left;
@@ -46,8 +48,11 @@ nav{
     align-items: center;
 }
 
+
+
 nav .logo {
     position: relative;
+    text-decoration: none;
     top: 50%;
     text-transform: uppercase;
     color: rgb(0, 0, 0);
@@ -143,7 +148,7 @@ nav img{
     width: 33%;
     margin: 8%;
     position: absolute;
-    text-align: center;
+    text-align: left;
 }
 
 .text-box h1{
@@ -196,19 +201,52 @@ nav .menu-button-label{
     display: none;
 }
 
-/* ----------- service ------------ */
-.service{
+/* --------- default container --------*/
+
+.container {
+    position: relative;
     background-color: white;
-    width: 66%;
+    width: 75%;
     border-radius: 12px;
     margin: auto;
-    text-align: center;
+    margin-top: 120px;
+    text-align: left;
     padding: 32px 32px;
 }
 
-h1{
-    font-size: 36px;
+
+.container h1{
+    position: relative;
+    left: 18px;
     font-weight: 600;
+    text-transform: uppercase;
+    font-size: 40px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.container h1 span {
+    display: block;
+    font-size: 0.5em;
+}
+
+.container h1:before {
+    position: absolute;
+    left: -15px;
+    bottom: 0px;
+    width: 6px;
+    height: 100%;
+    content: "";
+    background-color: #2c84e9;
+}
+
+.container h1 span {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.4);
 }
 
 p{
@@ -216,79 +254,64 @@ p{
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
-    padding: 10px;
 }
+
+/* ----------- service ------------ */
+
 
 .row{
     margin: auto;
-    margin-top: 5%;
+    margin-top: 24px;
     display: flex;
     justify-content: space-between;
 }
 
-.service-col{
+.col{
     flex-basis: 31%;
     margin: 12px;
     background: #fff3f3;
     border-radius: 12px;
-    padding: 20px 12px;
+    /* padding: 20px 12px; */
     box-sizing: border-box;
     transition: 0.2s;
+    overflow: hidden;
+    position: relative;
 }
 
-h3{
+.col p{
+    text-align: left;
+    padding: 12px;
+}
+
+.col h3{
     text-align: center;
     font-weight: 600;
     margin: 10px 0; 
 }
 
-.service-col:hover{
+.col:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
     transform: scale(1.1);
 }
 
 /* ------- location -------- */
 
-.location{
-    margin: auto;
-    margin-top: 128px;
-    background-color: white;
-    width: 66%;
-    text-align: center;
-    padding: 32px 32px;
-    border-radius: 12px;
 
-}
-
-.location .row{
-    margin-top: 30px;
-}
-
-.location-col{
-    border-radius: 12px;
-    margin: 12px;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    flex-basis: 33%;
-    transition: 0.5s;
-}
-
-.location-col img{
+.col img{
     width: 100%;
     display: block;
 }
 
-.layer{
+.col .layer{
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    transition: 0.5s;
+    /* transition: 0.5s; */
 }
 
-.layer h3{
+.col .layer h3{
     width: 100%;
     font-weight: 500;
     font-size: 26px;
@@ -302,21 +325,12 @@ h3{
 }
 
 /* ----------- reviews ---------- */
-.reviews{
-    background-color: white;
-    border-radius: 12px;
-    margin: auto;
-    margin-top: 128px;
-    width: 66%;
-    padding: 32px 32px;
-    text-align: center;
-}
 
 .reviews p{
     margin-bottom: 32px;
 }
 
-.reviews .review-container{
+.container .review-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -356,6 +370,113 @@ h3{
 }
 .review-card .fa{
     color: #FFD700;
+}
+
+
+    
+/* Styling the three events section */
+section .events {
+}
+    
+/* Styling the links of
+the events section */
+section .events ul {
+    padding: 40px;
+    box-sizing: border-box;
+}
+    
+/* Styling the lists of the event section */
+section .events ul li {
+    list-style: none;
+    background: #fff;
+    box-sizing: border-box;
+    height: 120px;
+    margin: 15px 0;
+}
+    
+/* Styling the time class of events section */
+section .events ul li .time {
+    position: relative;
+    background: #262626;
+    box-sizing: border-box;
+    width: 30%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    transition: .5s;
+}
+    
+/* Styling the hover effect
+    of events section */
+section .events ul li:hover .time {
+    background: #e91e63;
+}
+    
+/* Styling the header of time
+    class of events section */
+section .events ul li .time h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 60px;
+    line-height: 30px;
+}
+    
+/* Styling the texts of time
+class of events section */
+section .events ul li .time h2 span {
+    font-size: 30px;
+}
+    
+/* Styling the details
+class of events section */
+section .events ul li .details {
+    padding: 0px 20px;
+    background: #fff;
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    float: left;
+}
+    
+/* Styling the header of the
+details class of events section */
+section .events ul li .details h3 {
+    text-align: left;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+    
+/* Styling the lists of details
+class of events section */
+section .events ul li .details p {
+    position: relative;
+    margin: 10px 0 0;
+    padding: 0;
+    font-size: 16px;
+}
+    
+/* Styling the links of details
+class of events section */
+section .events ul li .details a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    border: 1.5px solid #262626;
+    margin-top: 8px;
+    font-size: 18px;
+    transition: .5s;
+}
+    
+/* Styling the details class's hover effect */
+section .events ul li .details a:hover {
+    background: #e91e63;
+    color: #fff;
+    border-color: #e91e63;
 }
 
 
@@ -433,4 +554,5 @@ footer{
     .service{width: 75%;}
     .location{width: 75%;}
     .reviews{width: 75%;}
+
 }

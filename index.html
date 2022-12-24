@@ -1,48 +1,26 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doco Disco</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <section class="header">
-        <nav>
-            <div class="logo"><span>Doco</span>Disco</div>
-            <!-- <a href="index.html"><img src="./images/doco-logo.jpg"></a> -->
-            <div class="nav-links" id="navLinks">
-                <!-- <i class="fa fa-times" onclick="hideMenu()"></i> -->
-                <ul>    
-                    <li><a href="">EVENTS</a></li>
-                    <li><a href="">RENTALS</a></li>
-                    <li><a href="">ABOUT US</a></li>
-                    <li><a href="">CONTACT</a></li>
-                    <li><a href="">COMING SOON</a></li>
-                </ul>
-            </div>
-            <input type="checkbox" id="menuButton" />
-            <label for="menuButton" class="menu-button-label">
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-                <div class="white-bar"></div>
-            </label>
-            <!-- <i class="fa fa-bars" onclick="showMenu()"></i> -->
-        </nav>
+        <div id="nav-placeholder"></div>
         <video autoplay playsinline muted loop id="docoVideo">
             <source src="images/doco-ball.mp4" type="video/mp4">
         </video>
 
         <div class="text-box" data-aos="fade-up" data-aos-duration="1000">
-            <h1>Doco<t style="font-weight: 100">Disco</t></h1>
+            <h1>DoCo<t style="font-weight: 100">Disco</t></h1>
             <h2>Let's get dancing.</h2>
             <p>With 3 different music stations to choose from, everyone 
                 is sure to find the dancing music they like!</p>
@@ -50,48 +28,82 @@
                 <button class="doco-btn">Contact us for More Information</button>
             </div>
         </div>
-
     </section>
 
-    <section class="service" data-aos="fade-up" data-aos-duration="1000">
-        <h1>Services We Offer</h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-        </p>
+    <section class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1>Services
+            <span>How to work with us.</span>
+        </h1>
         <div class="row">
-            <div class="service-col">
-                <h3>Venues</h3>
-                <p>, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col">
+                <h3>Rent</h3>
+                <p>Looking to host your own silent disco party? We've got you
+                    covered! With our rental package, you'll receive everything 
+                    you need to get the party started. Our package includes 100
+                    wireless headphone and 3 transmitters that can easily hook up
+                    to your laptop or other music devices.</p>
+
+                <p>No need to worry about 
+                    setting up complicated equipment or dealing with the hassle 
+                    of loud music. With DoCo Disco, all you need to do is plug in
+                    and let the party begin! Your guests will be able to dance 
+                    and enjoy their favorite tunes without disturbing the 
+                    neighbors or breaking any sound regulations. Rent our DoCo 
+                    Disco package today and take your private party to the next
+                    level.</p>
             </div>
-            <div class="service-col">
-                <h3>Private Events</h3>
-                <p>caecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="col">
+                <h3>Hire</h3>
+                <p>Are you in need of an exciting and hassle-free music solution
+                for your upcoming event? For a 
+                flat fee, our team will handle all aspects of the music portion 
+                of your event, ensuring that your guests have a memorable and 
+                enjoyable experience. And with our customizable playlist options
+                and wireless headphones, we can cater to a wide range of music
+                tastes and create the perfect atmosphere for your occasion. </p>
+                
+                <p> Whether you're hosting a corporate event, wedding reception, or
+                private party, DoCo Disco has the expertise and equipment to 
+                make your event a success. So why wait? Contact us today to 
+                learn more about how we can cater to your specific needs and 
+                bring the party to life!  </p>
             </div>
-            <div class="service-col">
-                <h3>Bars</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+            <div class="col">
+                <h3>Partner</h3>
+                <p>Is your bar or venue interested in having a unique DJ 
+                    experience?  We understand that planning an event can 
+                    be stressful, which is why we strive to make the process as 
+                    smooth and hassle-free as possible. </p>
+                <p>Our team is committed to helping you every step of the way, 
+                    from creating custom marketing materials to handling ticket 
+                    sales at the door. </p>
+                    
+                <p>Doco Disco gets their profits from the 
+                    ticket sales, and the venue gets their profits from the food
+                    and beverage sales.</p>
             </div>
         </div>
     </section>
 
-    <section class="location" data-aos="fade-up" data-aos-duration="1000">
-        <h1>Locations</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing e</p>
+    <section class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1>Locations
+        <span>Where you can find us.</span>
+        </h1>
 
         <div class="row">
-            <div class="location-col">
+            <div class="col">
                 <img src="./images/location-dc.jpg">
                 <div class="layer">
                     <h3>DOOR COUNTY</h3>
                 </div>
             </div>
-            <div class="location-col">
+            <div class="col">
                 <img src="images/location-mke.jpg">
                 <div class="layer">
                     <h3>MILWAUKEE</h3>
                 </div>
             </div>
-            <div class="location-col">
+            <div class="col">
                 <img src="images/location-mad.jpg">
                 <div class="layer">
                     <h3>MADISON</h3>
@@ -102,11 +114,12 @@
     </section>
 
     <!-- -------- TESTIMONIALS ---------- -->
-    <section class="reviews"data-aos="fade-up" data-aos-duration="1000">
-        <h1>What our Users Say</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,.</p>
+    <section class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1>Reviews
+            <span>What our customers say.</span>
+        </h1>
         <div class="review-container">
-            <div class="review-card" data-aos="flip-left">
+            <div class="review-card">
                 <img src="images/milan.jpg">
                 <div>
                     <p>This was so much fun! The music was great, and the vibe was bumpin!</p>
@@ -118,7 +131,7 @@
                     <i class="fa fa-star"></i>
                 </div>
             </div>
-            <div class="review-card"data-aos="flip-left" data-aos-delay="500">
+            <div class="review-card">
                 <img src="images/kolt.jpg">
                 <div>
                     <p>I couldn't belive how awesome this was!</p>
@@ -130,7 +143,7 @@
                     <i class="fa fa-star-half-o"></i>
                 </div>
             </div>
-            <div class="review-card"data-aos="flip-left" data-aos-delay="1000">
+            <div class="review-card">
                 <img src="images/karin.jpg">
                 <div>
                     <p>So much fun. You have to experience it. You’re in your world, with others around....maybe similar, always different. Empowering. I met so many fun people at this event....because I could simply take my headset off and commune with many people.....and dance and sing. Just doesn’t get much better. DoCo Disco May have originated in Door County......but they’re going places! Perfect for a high school!</p>
@@ -142,7 +155,7 @@
                     <i class="fa fa-star"></i>
                 </div>
             </div>
-            <div class="review-card"data-aos="flip-left" data-aos-delay="1500">
+            <div class="review-card">
                 <img src="images/jordan.jpg">
                 <div>
                     <p>Awesome staff and overall great experience.</p>
@@ -157,7 +170,7 @@
         </div>
     </section>
 
-    <section class="contact-form"data-aos="fade-up" data-aos-duration="3000">
+    <section class="contact-form">
         <h1>What our Users Say</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,.</p>
     </section>

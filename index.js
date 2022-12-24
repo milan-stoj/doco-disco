@@ -8,9 +8,10 @@
 
 AOS.init();
 
+$("#nav-placeholder").load("nav.html");
 
 $( document ).ready(function() {
-    
+
     // Function to change the nav-bar on scroll
     // $(window).scroll(function(){
     //     ($(window).scrollTop() >= 100) ? (
@@ -30,6 +31,4 @@ $( document ).ready(function() {
             $('#navLinks').css({'right':'-200px'})
         );
     });
-
-    
 });
