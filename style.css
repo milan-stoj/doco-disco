@@ -25,7 +25,8 @@
     width: 100%;
     overflow: hidden;
     object-position: top left;
-    border-left: none;
+    outline: none;
+    margin-left: -1px;
 }
 
 nav{
