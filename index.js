@@ -1,5 +1,3 @@
-$("#nav-placeholder").load("nav.html");
-
 $( document ).ready(function() {
 
     // Drop Down Function
