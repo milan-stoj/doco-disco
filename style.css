@@ -516,10 +516,16 @@ footer{
 
     .text-box h2{
         font-size: 24px;
+        padding: 0px;
+    }
+
+    .doco-btn {
+        margin: 0;
     }
 
     .text-box p{
         font-size: 16px;
+        padding: 0px;
     }
     .nav-links ul li{
         display: block;
