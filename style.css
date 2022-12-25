@@ -396,7 +396,7 @@ the events section */
     background: #fff;
     box-sizing: border-box;
     height: 120px;
-    margin: 15px 0;
+    margin: 24px 0;
 }
     
 /* Styling the time class of events section */
@@ -472,6 +472,7 @@ class of events section */
     text-decoration: none;
     padding: 10px 15px;
     border: 1.5px solid #262626;
+    border-radius: 12px;
     margin-top: 8px;
     font-size: 18px;
     transition: .5s;
@@ -569,5 +570,107 @@ footer{
     .service{width: 75%;}
     .location{width: 75%;}
     .reviews{width: 75%;}
+
+    /* Styling the links of
+    the events section */
+    .events ul {
+        padding: 0px;
+        margin-top: 24px;
+        box-sizing: border-box;
+    }
+        
+    /* Styling the lists of the event section */
+    .events ul li {
+        list-style: none;
+        background: #fff;
+        box-sizing: border-box;
+        height: 100px;
+    }
+        
+    /* Styling the time class of events section */
+    .events ul li .time {
+        position: relative;
+        background: #262626;
+        box-sizing: border-box;
+        border-radius: 12px;
+        width: 30%;
+        height: 100%;
+        float: left;
+        text-align: center;
+        transition: .5s;
+    }
+        
+    /* Styling the hover effect
+        of events section */
+    .events ul li:hover .time {
+        background: #e91e63;
+    }
+        
+    /* Styling the header of time
+        class of events section */
+    .events ul li .time h2 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        font-size: 24px;
+        line-height: 30px;
+    }
+        
+    /* Styling the texts of time
+    class of events section */
+    .events ul li .time h2 span {
+        font-size: 18px;
+    }
+        
+    /* Styling the details
+    class of events section */
+    .events ul li .details {
+        padding: 0px 0px 0px 20px;
+        background: #fff;
+        box-sizing: border-box;
+        width: 70%;
+        height: 100%;
+        float: left;
+        display: flex;
+        flex-direction: column;
+    }
+        
+    /* Styling the header of the
+    details class of events section */
+    .events ul li .details h3 {
+        text-align: left;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+    }
+        
+    /* Styling the lists of details
+    class of events section */
+    .events ul li .details p {
+        position: relative;
+        margin: 0px;
+        font-size: 20px;
+    }
+        
+    /* Styling the links of details
+    class of events section */
+    .events ul li .details a {
+        padding: 6px 18px;
+        margin-top: auto;
+        margin-right: auto;
+        border: 1.5px solid #262626;
+        font-size: 16px;
+        transition: .5s;
+    }
+        
+    /* Styling the details class's hover effect */
+    .events ul li .details a:hover {
+        background: #e91e63;
+        color: #fff;
+        border-color: #e91e63;
+    }
 
 }
