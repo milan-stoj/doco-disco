@@ -14,15 +14,12 @@
 </head>
 
 <body>
-    <section class="header">
         <nav>
             <a id = "logo" href="./index.html" class="logo"><span>Doco</span>Disco</a>
             <div class="nav-links" id="navLinks">
                 <ul>    
                     <li><a href="#events">EVENTS</a></li>
-                    <li><a href="">BOOKING</a></li>
-                    <li><a href="">CONTACT</a></li>
-                    <li><a href="">MEDIA</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
                 </ul>
             </div>
             <input type="checkbox" id="menuButton"/>
@@ -33,6 +30,7 @@
                 <div class="white-bar"></div>
             </label>
         </nav>
+    <section class="header">
 
         <video autoplay playsinline muted loop id="docoVideo">
             <source src="images/doco-ball.mp4" type="video/mp4">
@@ -42,7 +40,7 @@
             <h1>DoCo<t style="font-weight: 100">Disco</t></h1>
             <h2>Let's get dancing.</h2>
             <p>With 3 different music stations to choose from, everyone 
-                is sure to find the dancing music they like!</p>
+                is sure to find the sound they like!</p>
             <div data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1500">
                 <button class="doco-btn" id="learn-more">Learn More</button>
             </div>
@@ -74,7 +72,6 @@
                     Disco package today and take your private party to the next
                     level.
                 </p>
-                <button class="default-btn">Explore Rentals</button>
             </div>
             <div class="col">
                 <h3>Hire</h3>
@@ -95,7 +92,6 @@
                     learn more about how we can cater to your specific needs and 
                     bring the party to life!
                 </p>
-                <button class="default-btn">Hire Us</button>
             </div>
             <div class="col">
                 <h3>Partner</h3>
@@ -117,8 +113,11 @@
                     ticket sales, and the venue gets their profits from the food
                     and beverage sales. 
                 </p>
-                <button class="default-btn">Partner with Us</button>
             </div>
+        </div>
+        <div class="row">
+            <button class="default-btn" onclick="window.location.href='#contact'">Contact us</button>
+                
         </div>
     </section>
 
@@ -151,7 +150,7 @@
     </section>
 
     <!-- -------- TESTIMONIALS ---------- -->
-    <!-- <section class="container" data-aos="fade-up" data-aos-duration="1000">
+    <section class="container" data-aos="fade-up" data-aos-duration="1000">
         <h1>Reviews
             <span>What our customers say.</span>
         </h1>
@@ -205,13 +204,23 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section> 
 
-    <section class="container" id="events" data-aos="fade-up" data-aos-duration="1000">
+    <section class="container" data-aos="fade-up" data-aos-duration="1000">
+        <a class="anchor" id="events"></a>
         <h1>Events
             <span>Upcoming Doco Disco shows.</span>
         </h1>
-        <div class="events">
+        <div class="row" style="text-align: center; display: inline-block; width: 100%;">
+            <br>
+            <br>
+            <h2>
+                No events yet! Stay tuned.
+            </h2>
+            <br>
+            <br>
+        </div>
+        <!-- <div class="events">
             <ul>
                 <li>
                     <div class="time">
@@ -255,12 +264,34 @@
                     <div style="clear:both;"></div>
                 </li>
             </ul>
-        </div>
+        </div> -->
     </section>
 
-    <section class="contact-form">
-        <h1>What our Users Say</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,.</p>
+    <section class="container" style="margin-bottom: 60px">
+        <a class="anchor" id="contact"></a>
+        <h1>Contact
+            <span>Reach out to us!</span>
+        </h1>
+        <div class="row">
+            <form action="https://formspree.io/mlepvapv" method="POST" data-aos = "fade-up" data-aos-delay="300">
+                <label>
+                    name
+                    <input type="text" name="_sendername" placeholder="Enter your name...">
+                </label>
+                <label>
+                    email
+                    <input type="text" name="_replyto" placeholder="Enter your email...">
+                </label>
+                <label>
+                    message
+                    <textarea type = "text" name="message" placeholder="What's up?" rows="10"></textarea>
+                </label>
+
+                <!-- other form fields here -->
+
+                <button type="submit"><b>Send</b></button>
+            </form>
+        </div>
     </section>
 
     <footer>
