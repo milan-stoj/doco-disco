@@ -42,6 +42,7 @@ nav {
     transition: 0.35s ease;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid white;
 }
 
 nav.shrunk {
@@ -106,7 +107,8 @@ nav .logo span {
 
 nav .nav-links{
     color: white;
-    text-align: left;
+    flex: 1;
+    text-align: right;
 }
 
 nav .nav-links ul li{
@@ -190,11 +192,10 @@ nav .menu-button-label{
 .container {
     position: relative;
     width: 75%;
-    margin: auto;
+    margin: 32px auto;
     color: white;
     scroll-margin-top: 130px;
     text-align: left;
-    padding: 32px 32px;
 }
 
 .container .content {
@@ -206,6 +207,7 @@ nav .menu-button-label{
 
 .container h1{
     position: relative;
+    width: 66%;
     left: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -245,7 +247,7 @@ p{
 
 
 .row{
-    margin: auto;
+    width: 100%;
     margin-top: 24px;
     display: flex;
     justify-content: space-between;
@@ -407,9 +409,7 @@ class of events section */
 
 
 form{
-    display: inline-block;
-    margin: auto;
-    width: 67%;
+    width: 100%;
 }
 
 form label{
@@ -420,9 +420,10 @@ input,
 select,
 textarea{
     width: 100%;
+    display: block;
     color: white;
     background-color: transparent;
-    padding: 8px 8px;
+    padding: 8px 0px;
     margin-bottom: 1rem;
     border: 1px solid white;
 }
@@ -436,13 +437,10 @@ textarea{
 footer{
     position: relative;
     color: white;
-    right: 0;
     bottom: 0;
-    left: 0;
-    width: 100%;
     font-size: 8px;
-    padding: 1rem;
     text-align: center;
+    margin: 1rem 1rem;
   }
 
 
@@ -469,40 +467,40 @@ footer{
         font-size: 16px;
         padding: 0px;
     }
-    .nav-links ul li{
+    nav .nav-links ul li{
         display: block;
     }
-    .nav-links ul li a{
+    nav .nav-links ul li a{
         color: white;
     }
     nav .nav-links{
         position: absolute;
         backdrop-filter: blur(10px); /* Blurs content behind the navbar */
-        border-radius: 0 0 0 0;
+        outline: 1px solid white;
+        border-radius: 0 0 0 1rem;
         height: auto;
-        width:200px;
+        width:175px;
         top: 75px;
-        /* right: -200px; */
+        right: -175px;
         text-align: left;
         z-index: 1000;
         transition: 0.75s;
     }
 
     nav {
-        padding: 0px 0px;
+        padding: 0px 25px;
     }
 
     nav .menu-button-label{
         position: absolute;
         display: block;
-        backdrop-filter: blur(10px); /* Blurs content behind the navbar */
         font-size: 22px;
         cursor: pointer;
         transition: 0.75s;
     }
 
-    .nav-links ul{
-        /* padding: 16px; */
+    nav .nav-links ul{
+        padding: 16px;
     }
 
     .container .content{
@@ -593,9 +591,18 @@ footer{
     }
 
     form{
-        display: inline-block;
-        margin: auto;
         width: 100%;
     }
+
+    input,
+    select,
+    textarea{
+        box-sizing: border-box;
+        color: white;
+        background-color: transparent;
+        padding: 8px 8px;
+        border: 1px solid white;
+    }
+
         
 }
