@@ -16,9 +16,10 @@
 
 <body>
     <nav>
-        <a id="logo" href="./index.html" class="logo"><span>Doco</span>Disco</a>
+        <a id="logo" href="./index.html" class="logo"><span>UDP</span></a>
         <div class="nav-links" id="navLinks">
             <ul>
+                <li><a href="#about">ABOUT</a></li>
                 <li><a href="#events">EVENTS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
@@ -31,237 +32,89 @@
             <div class="white-bar"></div>
         </label>
     </nav>
-    <section class="header">
+    <section class="hero">
+        <div class="logo" data-aos="fade-up" data-aos-duration="1000">
+            <img src="./images/udp.png">
+        </div>
+        <div class="cta" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1000">
+            <button onclick="document.getElementById('about').scrollIntoView()">Learn More</a>
+        </div>
+    </section>
 
-        <video autoplay playsinline muted loop id="docoVideo">
-            <source src="images/doco-ball.mp4" type="video/mp4">
-        </video>
+    <section id="about" class="container" data-aos="fade-up" data-aos-duration="1000">
+        <h1>ABOUT
+        </h1>
+        <div class="content">
+            <div class="col">
 
-        <div class="text-box" data-aos="fade-up" data-aos-duration="1000">
-            <h1>DoCo<t style="font-weight: 100">Disco</t>
-            </h1>
-            <h2>Let's get dancing.</h2>
-            <p>With <b>100 headsets</b>, and <b>3 different music stations</b> to choose from, everyone
-                is sure to find the sound they like!</p>
-            <div data-aos="flip-up" data-aos-duration="1000" data-aos-delay="1500">
-                <a href="#start-location" class="doco-btn" id="learn-more">Learn More</a>
+                <img src="./images/dancing.png">
+            </div>
+            <div class="col">
+                <p>
+                    Our mission is to create unforgettable experiences where every individual can find their rhythm,
+                    express themselves freely, and dance the night away.
+                    <br><br>
+                    Whether you're grooving at a private celebration, vibing at a festival, or attending one of our
+                    local events, we bring the beats that move you and the moments that stick with you.
+                    <br><br>
+                    Check out our upcoming events or book us for your party. We look forward to dancing with you!
+                </p>
+            </div>
             </div>
         </div>
-    </section>    
-    
-    <p id="events"></p>
+    </section>
 
-    <section class="container" data-aos="fade-up" data-aos-duration="1000">
-        <a class="anchor"></a>
+    <section id="events" class="container" data-aos="fade-up" data-aos-duration="1000">
         <h1>Events
-            <span>Upcoming Doco Disco shows.</span>
         </h1>
         <div class="row" style="text-align: center; display: inline-block; width: 100%;">
-            <br>
-            <br>
-            <h2>
-                No events yet! Stay tuned.
-            </h2>
-            <br>
-            <br>
         </div>
-        <!-- <div class="events">
+        <div class="events">
             <ul>
                 <li>
                     <div class="time">
                         <h2>
-                            15 <br><span>March</span>
+                            ? <br><span>November</span>
                         </h2>
                     </div>
                     <div class="details">
-                        <h3>Milwaukee, WI</h3>
-                        <p>Vituci's Bar</p>
-                        <a href="#">View Details</a>
+                        <h3>Sturgeon Bay</h3>
+                        <p>TBD</p>
+                        <!-- <a href="#">View Details</a> -->
                     </div>
-                    <div style="clear: both;"></div>
                 </li>
 
                 <li>
                     <div class="time">
                         <h2>
-                            27 <br><span>May</span>
+                            ? <br><span>December</span>
                         </h2>
                     </div>
                     <div class="details">
-                        <h3>Madison, WI</h3>
-                        <p>The Harry</p>
-                        <a href="#">View Details</a>
+                        <h3>Sturgeon Bay</h3>
+                        <p>TBD</p>
+                        <!-- <a href="#">View Details</a> -->
                     </div>
-                    <div style="clear:both;"></div>
                 </li>
 
                 <li>
                     <div class="time">
                         <h2>
-                            12 <br><span>August</span>
+                            ? <br><span>January</span>
                         </h2>
                     </div>
                     <div class="details">
-                        <h3>Door County, WI</h3>
-                        <p>Chop</p>
-                        <a href="#">View Details</a>
+                        <h3>Sturgeon Bay</h3>
+                        <p>TBD</p>
+                        <!-- <a href="#">View Details</a> -->
                     </div>
-                    <div style="clear:both;"></div>
                 </li>
             </ul>
-        </div> -->
-    </section>
-
-    <p id="start-location"></p>
-
-    <section class="container" id="start" data-aos="fade-up" data-aos-duration="1000">
-        <h1>Services
-            <span>Dance with us.</span>
-        </h1>
-        <div class="row">
-            <div class="col">
-                <h3>Private Party</h3>
-                <p>
-                    Are you in need of an exciting and hassle-free music solution
-                    for your upcoming event? For a
-                    flat fee, our team will handle all aspects of the music portion
-                    of your event, ensuring that your guests have a memorable and
-                    enjoyable experience. And with our customizable playlist options
-                    and wireless headphones, we can cater to a wide range of music
-                    tastes and create the perfect atmosphere for your occasion.
-
-                    <br><br>
-
-                    Whether you're hosting a corporate event, wedding reception, or
-                    private party, DoCo Disco has the expertise and equipment to
-                    make your event a success. So why wait? Contact us today to
-                    learn more about how we can cater to your specific needs and
-                    bring the party to life!
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h3>Public Event</h3>
-                <p>
-                    Is your bar or venue interested in having a unique DJ
-                    experience? We understand that planning an event can
-                    be stressful, which is why we strive to make the process as
-                    smooth and hassle-free as possible.
-
-                    <br><br>
-
-                    Our team is committed to helping you every step of the way,
-                    from creating custom marketing materials to handling ticket
-                    sales at the door.
-
-                    <br><br>
-
-                    Doco Disco gets their profits from the
-                    ticket sales, and the venue gets their profits from the food
-                    and beverage sales.
-                </p>
-            </div>
-        </row>
-        </div>
         </div>
     </section>
 
-    <!-- <section class="container" data-aos="fade-up" data-aos-duration="1000">
-        <h1>Locations
-        <span>Where you can find us.</span>
-        </h1>
-
-        <div class="row">
-            <div class="col">
-                <img src="./images/location-dc.jpg">
-                <div class="layer">
-                    <h3>DOOR COUNTY</h3>
-                </div>
-            </div>
-            <div class="col">
-                <img src="images/location-mke.jpg">
-                <div class="layer">
-                    <h3>MILWAUKEE</h3>
-                </div>
-            </div>
-            <div class="col">
-                <img src="images/location-mad.jpg">
-                <div class="layer">
-                    <h3>MADISON</h3>
-                </div>
-            </div>
-        </div>
-
-    </section> -->
-
-    <!-- -------- TESTIMONIALS ---------- -->
-    <section class="container" data-aos="fade-up" data-aos-duration="1000">
-        <h1>Reviews
-            <span>What our customers say.</span>
-        </h1>
-        <div class="review-container">
-            <div class="review-card">
-                <img src="images/milan.jpg">
-                <div>
-                    <p>This was so much fun! The music was great, and the vibe was bumpin!</p>
-                    <h3>Milan Stojanovic</h3>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </div>
-            </div>
-            <div class="review-card">
-                <img src="images/kolt.jpg">
-                <div>
-                    <p>I couldn't belive how awesome this was!</p>
-                    <h3>Kolt Knutson</h3>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-half-o"></i>
-                </div>
-            </div>
-            <div class="review-card">
-                <img src="images/karin.jpg">
-                <div>
-                    <p>So much fun. You have to experience it. You’re in your world, with others around....maybe
-                        similar, always different. Empowering. I met so many fun people at this event....because I could
-                        simply take my headset off and commune with many people.....and dance and sing. Just doesn’t get
-                        much better. DoCo Disco May have originated in Door County......but they’re going places!
-                        Perfect for a high school!</p>
-                    <h3>Karin Miller Knutson</h3>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </div>
-            </div>
-            <div class="review-card">
-                <img src="images/jordan.jpg">
-                <div>
-                    <p>Awesome staff and overall great experience.</p>
-                    <h3>Jordan Scott</h3>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="container" style="margin-bottom: 60px">
-        <a class="anchor" id="contact"></a>
+    <section id="contact" class="container" style="margin-bottom: 60px">
         <h1>Contact
-            <span>Reach out to us!</span>
         </h1>
         <div class="row">
             <form action="https://formspree.io/f/mlepvapv" method="POST" data-aos="fade-up" data-aos-delay="300">
@@ -280,13 +133,13 @@
 
                 <!-- other form fields here -->
 
-                <button type="submit"><b>Send</b></button>
+                <button type="submit"><b>DANCE</b></button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>Copyright &copy; 2022, All Right Reserved <a href="">DocoDisco</a></p>
+        <p>Copyright &copy; 2024, All Right Reserved Undercover Dance Party LLC</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

@@ -2,81 +2,64 @@
     display: none;
 }
 
-html{scroll-behavior:smooth}
+html{
+    scroll-behavior:smooth;
+}
+
+body {
+    width: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(138deg, rgba(2,0,36,1) 0%, rgba(62,6,64,1) 54%, rgba(0,66,78,1) 100%);
+}
 
 *{
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    /* outline: 1px solid red; */
 }
 
-a.anchor {
-    display: block;
-    position: relative;
-    top: -100px;
-    visibility: hidden;
-}
-
-.header{
-    margin-top: 75px;
-    min-height: 100vh;
+img {
     width: 100%;
-    position: relative;
-    justify-content: left;
-    align-items: center;
-    display: flex;
-    box-shadow: 0 0 15px 2px rgba(0,0,0,0.5);
 }
 
-#docoVideo {
-    object-fit: cover;
+nav * {
+    color: white;
+}
+
+nav {
+    width: 100%;
     position: fixed;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    object-position: top left;
-    outline: none;
-}
-
-nav{
-    width: 100%;
-    background-color: white;
-    position: fixed;
+    color: White;
     display: flex;
     top: 0;
     left: 0;
     right: 0;
-    min-height: 75px;
+    height: 75px;
     padding: 0 50px;
     box-sizing: border-box;
-    box-shadow: 0 0 15px 2px rgba(0,0,0,0.5);
     z-index: 1;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
     transition: 0.35s ease;
     justify-content: space-between;
     align-items: center;
 }
 
+nav.shrunk {
+    top: -75px; /* Shrink height when scrolling */
+}
 
 
 nav .logo {
     position: relative;
+    color: white;
     text-decoration: none;
-    top: 50%;
     text-transform: uppercase;
-    color: rgb(0, 0, 0);
     font-size: 28px;
     font-weight: 300;
     cursor: pointer;
   }
 nav .logo span {
-   color: #000000;
     font-weight: 600;
-}
-
-nav img{
-    width: 100px;
 }
 
 .menu-button-label {
@@ -92,7 +75,7 @@ nav img{
     position: absolute;
     height: 2px;
     width: 66%;
-    background-color: rgb(0, 0, 0);
+    background-color: white;
     left: 50%;
     transform: translateX(-50%);
     transition: 0.4s ease, width 0.3s ease;
@@ -121,71 +104,39 @@ nav img{
     transform: translateX(-50%) rotate(-45deg);
   }
 
-.nav-links{
-    flex: 1;
-    text-align: right;
+nav .nav-links{
+    color: white;
+    text-align: left;
 }
 
-.nav-links ul li{
+nav .nav-links ul li{
+    color: white;
     list-style: none;
     display: inline-block;
     padding: 8px 12px;
     position: relative;
-
 }
 
-.nav-links ul li a{
-    color: black;
+nav .nav-links ul li a{
     text-decoration: none;
     font-size: 16px;
 }
 
-.nav-links ul li::after{
+nav .nav-links ul li::after{
     content: '';
     width: 0%;
     height: 2px;
-    background-color: #2c84e9;
+    background-color: #690083;
     display: block;
     margin: auto;
     transition: 0.33s;
 }
 
-.nav-links ul li:hover::after{
+nav .nav-links ul li:hover::after{
     width: 100%;
 }
 
-.text-box{
-    width: 33%;
-    margin: 8%;
-    position: absolute;
-    text-align: left;
-}
-
-.text-box h1{
-    margin-bottom: 0;
-    color: white;
-    font-size: 128px;
-    line-height: 1em;
-}
-
-.text-box h2{
-    color: white;
-    font-weight: 200;
-    font-size: 32px;
-    line-height: 2em;
-    padding-left: 7px;
-}
-
-.text-box p{
-    padding: 0;
-    font-size: 16px;
-    color: white;
-    margin-bottom: 24px;
-    padding-left: 7px;
-}
-
-.doco-btn{
-    margin-left: 7px;
+button {
     display: inline-block;
     text-decoration: none;
     background-color: transparent;
@@ -199,8 +150,8 @@ nav img{
 }
 
 
-.doco-btn:hover {
-    color: black;
+button:hover {
+    backdrop-filter: blur(5px); /* Blurs content behind the navbar */
     border: 1px solid black;
     background-color: white;
 }
@@ -213,30 +164,44 @@ nav .menu-button-label{
     display: none;
 }
 
-/* --------- default --------*/
-
-.default-btn{
+.hero {
+    height: 100vh;
     width: 100%;
-    display: inline-block;
-    border-radius: 1em;
-    text-decoration: none;
-    border: 1px solid white;
-    padding: 12px 24px;
-    font-size: 16px;
     position: relative;
-    cursor: pointer;
-    margin-top: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
+
+.hero .logo {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.hero .logo button {
+    margin: auto;
+    width: 150px;
+}
+
+/* --------- default --------*/
 
 .container {
     position: relative;
-    background-color: white;
-    /* width: 75%; */
+    width: 75%;
     margin: auto;
-    margin-top: 120px;
+    color: white;
+    scroll-margin-top: 130px;
     text-align: left;
     padding: 32px 32px;
 }
+
+.container .content {
+    margin-top: 2rem;
+    display: flex;
+}
+
 
 
 .container h1{
@@ -245,7 +210,6 @@ nav .menu-button-label{
     font-weight: 600;
     text-transform: uppercase;
     font-size: 40px;
-    color: #080808;
     -webkit-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s;
     transition: all 0.4s ease 0s;
@@ -263,24 +227,21 @@ nav .menu-button-label{
     width: 6px;
     height: 100%;
     content: "";
-    background-color: #2c84e9;
+    box-shadow: 0 0 10px #ff62ff, 0 0 20px #ff62ff, 0 0 30px #ff62ff, 0 0 40px #ff62ff;
+    background-color: #ff62ff
 }
 
 .container h1 span {
     font-size: 16px;
     font-weight: 500;
     text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.4);
 }
 
 p{
-    color: black;
     font-size: 14px;
     font-weight: 300;
     line-height: 22px;
 }
-
-/* ----------- service ------------ */
 
 
 .row{
@@ -291,8 +252,8 @@ p{
 }
 
 .col{
-    display: flex;
     flex-direction: column;
+    flex: 1;
     margin: 12px;
     border-radius: 12px;
     box-sizing: border-box;
@@ -339,69 +300,18 @@ p{
     bottom: 75%;
 }
 
-/* ----------- reviews ---------- */
-
-.reviews p{
-    margin-bottom: 32px;
-}
-
-.container .review-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-
-.review-card{
-    margin: 10px;
-    max-width: 66%;
-    border-radius: 10px;
-    text-align: left;
-    background: #fff3f3;
-    padding:25px;
-	transition: transform 0.2s;
-}
-
-.review-card:hover {
-    transform: scale(1.1);
-}
-
-.review-card img{
-    height: 40px;
-    margin-left: 5px;
-    margin-right: 30px; 
-    border-radius: 50%;
-}
-
-.review-card p{
-    padding: 0;
-    margin-bottom: 0;
-}
-
-.review-card h3{
-    margin-top: 15px;
-    text-align: left;
-}
-.review-card .fa{
-    color: #FFD700;
-}
-
-
-    
     
 /* Styling the links of
 the events section */
 .events ul {
-    padding: 40px;
     box-sizing: border-box;
 }
     
 /* Styling the lists of the event section */
 .events ul li {
     list-style: none;
-    background: #fff;
     box-sizing: border-box;
+    border: 1.5px solid white;
     height: 120px;
     margin: 24px 0;
 }
@@ -409,7 +319,6 @@ the events section */
 /* Styling the time class of events section */
 .events ul li .time {
     position: relative;
-    background: #262626;
     box-sizing: border-box;
     width: 30%;
     height: 100%;
@@ -431,7 +340,6 @@ the events section */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #fff;
     font-size: 60px;
     line-height: 30px;
 }
@@ -445,8 +353,7 @@ class of events section */
 /* Styling the details
 class of events section */
 .events ul li .details {
-    padding: 0px 20px;
-    background: #fff;
+    padding: 20px 20px;
     box-sizing: border-box;
     width: 70%;
     height: 100%;
@@ -487,9 +394,9 @@ class of events section */
     
 /* Styling the details class's hover effect */
 .events ul li .details a:hover {
-    background: #e91e63;
+    background: #730096;
     color: #fff;
-    border-color: #e91e63;
+    border-color: #6301a5;
 }
 
 
@@ -502,7 +409,7 @@ class of events section */
 form{
     display: inline-block;
     margin: auto;
-    width: 80%;
+    width: 67%;
 }
 
 form label{
@@ -513,28 +420,14 @@ input,
 select,
 textarea{
     width: 100%;
+    color: white;
+    background-color: transparent;
     padding: 8px 8px;
     margin-bottom: 1rem;
-    border: 1px solid #2c84e9;
-    border-radius: 12px;
-    outline-color: #2c84e9;
+    border: 1px solid white;
 }
 
-button{
-    width: initial;
-    background-color: #2c84e9;
-    color: #ffffff;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 650ms;
-    animation: pulse 2s infinite;
-}
 
-button:hover{
-    color: #008080;
-    background-color: #F1502F;
-}
 /* ∧∧∧ END contact form styling ∧∧∧ */
 
 
@@ -542,38 +435,34 @@ button:hover{
 
 footer{
     position: relative;
+    color: white;
     right: 0;
     bottom: 0;
     left: 0;
+    width: 100%;
+    font-size: 8px;
     padding: 1rem;
-    background-color: #efefef;
     text-align: center;
   }
 
 
 /* -------------- responsive ------------- */
 @media(max-width: 700px) {
-    .header {
-        justify-content: center;
-    }
 
-    .text-box {
+    .container {
         width: 90%;
-        position: absolute;
-        text-align: center;
     }
 
-    .text-box h1{
-        font-size: 50px;
+    .hero {
+        height: 75vh;
     }
-
-    .text-box h2{
-        font-size: 24px;
-        padding: 0px;
+    
+    .hero .logo {
+        width: 100%;
     }
-
-    .doco-btn {
-        margin: 0;
+    
+    .hero .logo button {
+        width: 200px;
     }
 
     .text-box p{
@@ -586,42 +475,39 @@ footer{
     .nav-links ul li a{
         color: white;
     }
-    .nav-links{
+    nav .nav-links{
         position: absolute;
-        background: black;
-        border-radius: 0 0 0 15%;
+        backdrop-filter: blur(10px); /* Blurs content behind the navbar */
+        border-radius: 0 0 0 0;
         height: auto;
-        width:175px;
+        width:200px;
         top: 75px;
-        right: -200px;
+        /* right: -200px; */
         text-align: left;
-        z-index: 2;
+        z-index: 1000;
         transition: 0.75s;
     }
 
     nav {
-        padding: 0px 25px;
+        padding: 0px 0px;
     }
 
     nav .menu-button-label{
         position: absolute;
         display: block;
-        color: black;
+        backdrop-filter: blur(10px); /* Blurs content behind the navbar */
         font-size: 22px;
         cursor: pointer;
         transition: 0.75s;
     }
+
     .nav-links ul{
-        padding: 16px;
+        /* padding: 16px; */
     }
 
-    .row{
+    .container .content{
         flex-direction: column;
     }
-
-    .service{width: 75%;}
-    .location{width: 75%;}
-    .reviews{width: 75%;}
 
     /* Styling the links of
     the events section */
@@ -634,28 +520,19 @@ footer{
     /* Styling the lists of the event section */
     .events ul li {
         list-style: none;
-        background: #fff;
         box-sizing: border-box;
-        height: 100px;
+        height: 75px;
     }
         
     /* Styling the time class of events section */
     .events ul li .time {
         position: relative;
-        background: #262626;
         box-sizing: border-box;
-        border-radius: 12px;
-        width: 30%;
+        width: 40%;
         height: 100%;
         float: left;
         text-align: center;
         transition: .5s;
-    }
-        
-    /* Styling the hover effect
-        of events section */
-    .events ul li:hover .time {
-        background: #e91e63;
     }
         
     /* Styling the header of time
@@ -665,27 +542,25 @@ footer{
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        color: #fff;
-        font-size: 24px;
+        font-size: 2rem;
         line-height: 30px;
     }
         
     /* Styling the texts of time
     class of events section */
     .events ul li .time h2 span {
-        font-size: 18px;
+        font-size: 1rem;
     }
         
     /* Styling the details
     class of events section */
     .events ul li .details {
-        padding: 0px 0px 0px 20px;
-        background: #fff;
         box-sizing: border-box;
-        width: 70%;
+        width: 60%;
         height: 100%;
-        float: left;
         display: flex;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
     }
         
@@ -713,16 +588,14 @@ footer{
         padding: 6px 18px;
         margin-top: auto;
         margin-right: auto;
-        border: 1.5px solid #262626;
         font-size: 16px;
         transition: .5s;
     }
-        
-    /* Styling the details class's hover effect */
-    .events ul li .details a:hover {
-        background: #e91e63;
-        color: #fff;
-        border-color: #e91e63;
-    }
 
+    form{
+        display: inline-block;
+        margin: auto;
+        width: 100%;
+    }
+        
 }
