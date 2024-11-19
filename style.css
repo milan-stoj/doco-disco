@@ -128,7 +128,7 @@ nav .nav-links ul li::after{
     content: '';
     width: 0%;
     height: 2px;
-    background-color: #690083;
+    background-color: #ff62ff;
     display: block;
     margin: auto;
     transition: 0.33s;
@@ -156,6 +156,7 @@ button:hover {
     backdrop-filter: blur(5px); /* Blurs content behind the navbar */
     border: 1px solid black;
     background-color: white;
+    color: black;
 }
 
 nav .fa{
@@ -169,6 +170,11 @@ nav .menu-button-label{
 .hero {
     height: 100vh;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 1080px;
     position: relative;
     justify-content: center;
     align-items: center;
@@ -192,7 +198,8 @@ nav .menu-button-label{
 .container {
     position: relative;
     width: 75%;
-    margin: 32px auto;
+    max-width: 1080px;
+    margin: 64px auto;
     color: white;
     scroll-margin-top: 130px;
     text-align: left;
@@ -202,8 +209,6 @@ nav .menu-button-label{
     margin-top: 2rem;
     display: flex;
 }
-
-
 
 .container h1{
     position: relative;
@@ -322,7 +327,7 @@ the events section */
 .events ul li .time {
     position: relative;
     box-sizing: border-box;
-    width: 30%;
+    width: 40%;
     height: 100%;
     float: left;
     text-align: center;
@@ -332,7 +337,7 @@ the events section */
 /* Styling the hover effect
     of events section */
 .events ul li:hover .time {
-    background: #e91e63;
+    background: #ff62ff;
 }
     
 /* Styling the header of time
@@ -355,9 +360,13 @@ class of events section */
 /* Styling the details
 class of events section */
 .events ul li .details {
-    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
-    width: 70%;
+    margin: auto;
+    width: 60%;
     height: 100%;
     float: left;
 }
@@ -367,8 +376,6 @@ details class of events section */
 .events ul li .details h3 {
     text-align: left;
     position: relative;
-    margin: 0;
-    padding: 0;
     font-size: 22px;
 }
     
@@ -376,8 +383,6 @@ details class of events section */
 class of events section */
 .events ul li .details p {
     position: relative;
-    margin: 10px 0 0;
-    padding: 0;
     font-size: 16px;
 }
     
@@ -401,13 +406,6 @@ class of events section */
     border-color: #6301a5;
 }
 
-
-/* Contact form */
-.contact {
-    overflow-y: hidden; /*Fixed issue with contact form creating a scroll bar during animation*/
-}
-
-
 form{
     width: 100%;
 }
@@ -423,7 +421,7 @@ textarea{
     display: block;
     color: white;
     background-color: transparent;
-    padding: 8px 0px;
+    padding: 8px 8px;
     margin-bottom: 1rem;
     border: 1px solid white;
 }
@@ -434,14 +432,107 @@ textarea{
 
 /* ------------ fooooooooter ---------- */
 
-footer{
+footer {
+    margin-top: 128px;
     position: relative;
+    width: 100%;
+    min-height: 100px;
+    background: #0a394c;
     color: white;
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: smaller;
+    padding-bottom: 1rem;
+}
+
+footer .social-links {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+footer .social-links li {
+    list-style: none;
+}
+
+footer .social-links li a {
+    font-size: 2rem;
+    margin: 0 1rem;
+    color: white;
+    display: inline-block;
+    list-style: none;
+    transition: 0.5s;
+}
+
+footer .social-links a:hover {
+    transform: translateY(-0.37rem);
+}
+
+footer .waves {
+    z-index: -9999;
+}
+
+footer .wave {
+    z-index: 0;
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(./images/wave.png);
+    background-size: 1000px;
+}
+
+footer .wave#wave1 {
+    opacity: 1;
     bottom: 0;
-    font-size: 8px;
-    text-align: center;
-    margin: 1rem 1rem;
-  }
+    animation: animateWave 8s linear infinite;
+}
+
+footer .wave#wave2 {
+    z-index: 999;
+    opacity: 0.66;
+    bottom: 10px;
+    animation: animateWave2 8s linear infinite;
+}
+
+footer .wave#wave3 {
+    z-index: 998;
+    opacity: 0.33;
+    bottom: 0;
+    animation: animateWave 6s linear infinite;
+}
+
+footer .wave#wave4 {
+    z-index: 997;
+    opacity: 0.16;
+    bottom: 10px;
+    animation: animateWave2 6s linear infinite;
+}
+
+/**ANIMATIONS**/
+@keyframes animateWave {
+    0% {
+        background-position-x: 1000px;
+    }
+    100% {
+        background-position-x: 0px;
+    }
+}
+
+@keyframes animateWave2 {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
 
 
 /* -------------- responsive ------------- */
@@ -479,10 +570,10 @@ footer{
         outline: 1px solid white;
         border-radius: 0 0 0 1rem;
         height: auto;
-        width:175px;
+        width:125px;
         top: 75px;
-        right: -175px;
-        text-align: left;
+        right: -125px;
+        text-align: right;
         z-index: 1000;
         transition: 0.75s;
     }
