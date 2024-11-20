@@ -9,7 +9,10 @@ html{
 body {
     width: 100%;
     background: rgb(2,0,36);
-    background: linear-gradient(138deg, rgba(2,0,36,1) 0%, rgba(62,6,64,1) 54%, rgba(0,66,78,1) 100%);
+    background: linear-gradient(145deg, 
+    rgba(2,0,36,1) 0%, 
+    rgba(62,6,64,1) 54%, 
+    rgba(0,66,78,1) 100%);
 }
 
 *{
@@ -207,7 +210,6 @@ nav .menu-button-label{
 }
 
 .container .content {
-    margin-top: 2rem;
     display: flex;
 }
 
@@ -246,9 +248,13 @@ nav .menu-button-label{
 }
 
 p{
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 300;
     line-height: 22px;
+}
+
+.info-card h1 {
+    font-size: 1rem;
 }
 
 
@@ -280,7 +286,6 @@ p{
     font-weight: 600;
 }
 
-/* ------- location -------- */
 
 
 .col img{
@@ -307,6 +312,71 @@ p{
     opacity: 1;
     bottom: 75%;
 }
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 3rem;
+  }
+  
+  .feature {
+    flex: 1 1 30%;
+    max-width: 30%;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .feature:hover {
+    transform: translateY(-10px);
+  }
+  
+  .icon-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg); /* Create diamond effect */
+    outline: 6px solid #ff62ff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px #ff62ff, 0 0 20px #ff62ff, 0 0 30px #ff62ff, 0 0 40px #ff62ff;
+
+  }
+  
+  .icon-wrapper i {
+    font-size: 2rem;
+    color: #fff;
+    transform: rotate(-45deg); /* Rotate back to normal */
+  }
+  
+  .feature h3 {
+    font-size: 1.2rem;
+    margin: 3rem 0 0 0;
+    color: white;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: white;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .features {
+      flex-direction: column;
+      align-items: center;
+      gap: 5rem;
+    }
+  
+    .feature {
+      flex: 1 1 80%;
+      max-width: 90%;
+    }
+  }
 
     
 /* Styling the links of
@@ -613,6 +683,7 @@ footer .wave#wave4 {
 
     .container .content{
         flex-direction: column;
+        margin: 1rem 0;
     }
 
     /* Styling the links of
