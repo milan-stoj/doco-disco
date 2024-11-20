@@ -26,6 +26,11 @@
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onSubmit(token) {
+        document.getElementById("contact-form").submit();
+      }
+    </script>
   </head>
 
   <body>
@@ -176,8 +181,7 @@
       >
         <h1>Contact Us</h1>
         <div class="container">
-          <form action="https://submit-form.com/keco2sQqW" method="POST">
-            <div class="g-recaptcha" data-sitekey="6LdvXIQqAAAAABMzG7JtgdHYoXK_lZWiTuxg60AP"></div>
+          <form id="contact-form" action="https://submit-form.com/keco2sQqW" method="POST">
             <label>
               Name
               <input
@@ -205,7 +209,7 @@
                 required
               ></textarea>
             </label>
-            <button type="submit"><b>DANCE</b></button>
+            <button class="g-recapthca" data-sitekey="6LdvXIQqAAAAABMzG7JtgdHYoXK_lZWiTuxg60AP" dataCallback="onSubmit"><b>DANCE</b></button>
           </form>
         </div>
       </section>
