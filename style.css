@@ -490,8 +490,9 @@ class of events section */
     border-color: #6301a5;
 }
 
-form{
+form {
     width: 100%;
+    margin-top: 1rem;
 }
 
 form label{
@@ -508,6 +509,10 @@ textarea{
     padding: 8px 8px;
     margin-bottom: 1rem;
     border: 1px solid white;
+}
+
+.grecaptcha-badge { 
+    visibility: hidden !important;
 }
 
 
