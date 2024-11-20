@@ -1,2 +1,2 @@
-# doco-disco
-Website for doco-disco
+# undercover dance party
+Source code for undercoverdanceparty.com

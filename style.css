@@ -212,7 +212,7 @@ nav .menu-button-label{
 
 .container h1{
     position: relative;
-    width: 66%;
+    width: 100%;
     left: 18px;
     font-weight: 600;
     text-transform: uppercase;
@@ -321,6 +321,18 @@ the events section */
     border: 1.5px solid white;
     height: 120px;
     margin: 24px 0;
+}
+
+.events ul li:nth-child(1) {
+    opacity: 1;
+}
+
+.events ul li:nth-child(2) {
+    opacity: 0.66;
+}
+
+.events ul li:nth-child(3) {
+    opacity: 0.33;
 }
     
 /* Styling the time class of events section */
@@ -542,6 +554,10 @@ footer .wave#wave4 {
         width: 90%;
     }
 
+    .container h1 {
+        font-size: 2rem;
+    }
+
     .hero {
         height: 75vh;
     }
@@ -632,7 +648,7 @@ footer .wave#wave4 {
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 2rem;
-        line-height: 30px;
+        line-height: 1rem;
     }
         
     /* Styling the texts of time
@@ -660,7 +676,7 @@ footer .wave#wave4 {
         position: relative;
         margin: 0;
         padding: 0;
-        font-size: 18px;
+        font-size: 1.3rem;
     }
         
     /* Styling the lists of details
@@ -668,7 +684,7 @@ footer .wave#wave4 {
     .events ul li .details p {
         position: relative;
         margin: 0px;
-        font-size: 20px;
+        font-size: 1rem;
     }
         
     /* Styling the links of details
